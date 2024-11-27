@@ -1,0 +1,121 @@
+@use "sass:map";
+@import "style/pages/theme";
+.header__top {
+    background: #f5f5f5;
+}
+.header__top_left{
+    ul{
+        display: flex;
+        column-gap: 5px;
+        list-style: none;
+        padding: 10px 0 10px;
+        column-gap: 20px; //Khoan cach
+        li {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            column-gap: 2px;
+            color: map.get($theme-colors, "normal-text");
+        }
+        li:first-child { //Chinh lay soc giua email
+            position: relative;
+            &::after {
+                position: absolute;
+                right: -10px;
+                top: 1px;
+                height: 20px;
+                width: 1px;
+                background: #000;
+                opacity: 0.1;
+                content: "";
+            }
+        }
+    }
+}
+.header__top_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0 10px;
+    ul{
+        display: flex;
+        column-gap: 5px;
+        list-style: none;
+        a {
+            font-size: 14px;
+            display: inline-block;
+            color: map.get($theme-colors, "normal-text");
+        }
+        li:last-child{
+            cursor: pointer;
+            margin-left: 10px;
+            span {
+                font-size: 14px;
+                margin-left: 2px;
+            }
+        }
+        
+    }
+}
+.header__logo {
+    padding: 15px 0;
+}
+.header__menu {
+    padding: 24px;
+
+    ul {
+        display: flex;
+        justify-content: space-between; //Cach deu trong chi dinh
+        li{
+            list-style: none;
+            a {
+                text-decoration: none; //Bo gạch duoi chu
+                font-size: 14px;
+                color: map.get($theme-colors, "bold-text");
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2px;
+                transition: all 0.3s;
+                padding: 5px 0;
+                display: block;
+            }
+        }
+        .active a {
+            color: map.get($theme-colors, "main");
+        }
+    }
+}
+.header__cart {
+    display: flex; //Cho ve 1 dòng hàng ngang
+    justify-content: center; //Noi dung canh giua
+    align-items: center; //Tren duoi dòng nam o giua
+    padding: 20px 0;
+    ul {
+        display: flex;
+        margin-right: 25px;
+        li {
+            list-style: none;
+            position: relative;
+            margin-left: 20px;
+            svg {
+                font-size: 25px;
+                color: map.get($theme-colors, "normal-text");
+            }
+            span {
+                color: white;
+                background: map.get($theme-colors, "main");
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%; //Bo tròn
+                display: inline-block;
+                text-align: center;
+                line-height: 20px;
+                font-size: 13px;
+                font-weight: 500; //Chu dam
+                left: 20px;
+                top: -2px;
+            }
+        }
+    }
+}
