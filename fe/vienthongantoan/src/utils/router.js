@@ -1,27 +1,16 @@
+export const ADMIN_PATH = "/quan-tri";
+
 export const ROUTERS = {
-  ADMIN: {
-    // HOME: "",
-    // PRODUCTS: "/quan-ly-san-pham",
-    // PRODUCT: "/quan-ly-san-pham/chi-tiet/:id",
-    // ORDERS: "/quan-ly-don-hang",
-    // ORDER: "/quan-ly-don-hang/chi-tiet/:id",
-    // STATISTICS: "/thong-ke",
-    USERS: "/quan-ly-nguoi-dung",
-    // USER: "/quan-ly-nguoi-dung/chi-tiet/:id",
-  },
   USER: {
     HOME: "",
     PROFILE: "thong-tin-ca-nhan",
     PRODUCTS: "/san-pham",
     PRODUCT: "/san-pham/chi-tiet/:id",
     SHOPPING_CART: "/gio-hang",
-    // CHECKOUT: "/thanh-toan",
-    // ORDER_DETAIL: "/thanh-toan/chi-tiet-don-hang/:id",
-    // ORDERS: "/quan-ly-don-hang",
-    // ORDER: "/quan-ly-don-hang/chi-tiet/:id",
-    // CART_DETAIL: "/gio-hang/chi-tiet/:id",
-    // CART: "/gio-hang",
-    // CONTACT: "/lien-he",
-    // TERMS_CONDITIONS: "/dieu-khoan-dich-vu",
+    CHECKOUT: "/thanh-toan",
+  },
+  ADMIN: {
+    LOGIN: `${ADMIN_PATH}/dang-nhap`,
+    ORDERS: `${ADMIN_PATH}/dat-hang`,
   },
 };
